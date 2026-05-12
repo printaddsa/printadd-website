@@ -89,6 +89,20 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    // Clean section hashes from URLs after direct links such as index.html#portfolio.
+    if (window.location.hash.length > 1) {
+        const hashTarget = document.querySelector(window.location.hash);
+        if (hashTarget) {
+            setTimeout(() => {
+                window.scrollTo({
+                    top: hashTarget.offsetTop - 80,
+                    behavior: 'auto'
+                });
+                history.replaceState(null, '', window.location.pathname + window.location.search);
+            }, 100);
+        }
+    }
     
     // === ACTIVE NAV LINK ===
     const sections = document.querySelectorAll('section[id]');
