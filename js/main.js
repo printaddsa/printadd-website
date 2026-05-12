@@ -198,6 +198,200 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     });
+
+    // === PORTFOLIO GALLERY ===
+    const galleryItems = document.querySelectorAll('.portfolio-item');
+
+    if (galleryItems.length) {
+        const galleryLabels = pageLang.startsWith('en') ? {
+            close: 'Close gallery',
+            previous: 'Previous image',
+            next: 'Next image',
+            openImage: 'Open image',
+            counter: (current, total) => `${current} / ${total}`,
+            fallbackTitle: 'Project Gallery'
+        } : {
+            close: '\u0625\u063a\u0644\u0627\u0642 \u0627\u0644\u0645\u0639\u0631\u0636',
+            previous: '\u0627\u0644\u0635\u0648\u0631\u0629 \u0627\u0644\u0633\u0627\u0628\u0642\u0629',
+            next: '\u0627\u0644\u0635\u0648\u0631\u0629 \u0627\u0644\u062a\u0627\u0644\u064a\u0629',
+            openImage: '\u0641\u062a\u062d \u0627\u0644\u0635\u0648\u0631\u0629',
+            counter: (current, total) => `${current} / ${total}`,
+            fallbackTitle: '\u0645\u0639\u0631\u0636 \u0627\u0644\u0645\u0634\u0631\u0648\u0639'
+        };
+
+        const modal = document.createElement('div');
+        modal.className = 'portfolio-gallery-modal';
+        modal.setAttribute('aria-hidden', 'true');
+        modal.innerHTML = `
+            <div class="gallery-backdrop" data-gallery-close></div>
+            <div class="gallery-dialog" role="dialog" aria-modal="true" aria-labelledby="galleryTitle">
+                <button class="gallery-close" type="button" data-gallery-close aria-label="${galleryLabels.close}">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div class="gallery-header">
+                    <span class="gallery-category"></span>
+                    <h3 id="galleryTitle"></h3>
+                    <p class="gallery-desc"></p>
+                </div>
+                <div class="gallery-viewer">
+                    <button class="gallery-nav gallery-prev" type="button" aria-label="${galleryLabels.previous}">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <a class="gallery-main-link" href="#" target="_blank" rel="noopener" aria-label="${galleryLabels.openImage}">
+                        <img class="gallery-main-img" src="" alt="">
+                    </a>
+                    <button class="gallery-nav gallery-next" type="button" aria-label="${galleryLabels.next}">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                <div class="gallery-footer">
+                    <div class="gallery-thumbs"></div>
+                    <span class="gallery-counter"></span>
+                </div>
+            </div>
+        `;
+        document.body.appendChild(modal);
+
+        const titleEl = modal.querySelector('#galleryTitle');
+        const categoryEl = modal.querySelector('.gallery-category');
+        const descEl = modal.querySelector('.gallery-desc');
+        const mainLink = modal.querySelector('.gallery-main-link');
+        const mainImg = modal.querySelector('.gallery-main-img');
+        const thumbsEl = modal.querySelector('.gallery-thumbs');
+        const counterEl = modal.querySelector('.gallery-counter');
+        const prevBtn = modal.querySelector('.gallery-prev');
+        const nextBtn = modal.querySelector('.gallery-next');
+        let activeImages = [];
+        let activeTitle = '';
+        let activeIndex = 0;
+
+        function readGalleryData(item) {
+            const coverImg = item.querySelector('.portfolio-img img');
+            const title = item.querySelector('.overlay-content h4')?.textContent.trim() || galleryLabels.fallbackTitle;
+            const category = item.querySelector('.overlay-category')?.textContent.trim() || '';
+            const desc = item.querySelector('.overlay-content p')?.textContent.trim() || '';
+            const imageList = item.dataset.galleryImages
+                ? item.dataset.galleryImages.split(',').map(src => src.trim()).filter(Boolean)
+                : [];
+            const pattern = item.dataset.galleryPattern;
+            const count = parseInt(item.dataset.galleryCount || '0', 10);
+            const pad = parseInt(item.dataset.galleryPad || '3', 10);
+            const linkList = item.dataset.galleryLinks
+                ? item.dataset.galleryLinks.split(',').map(src => src.trim())
+                : [];
+
+            if (pattern && count > 0) {
+                for (let i = 1; i <= count; i++) {
+                    imageList.push(pattern.replace('{n}', String(i).padStart(pad, '0')));
+                }
+            }
+
+            if (!imageList.length && coverImg) {
+                imageList.push(coverImg.getAttribute('src'));
+            }
+
+            return {
+                title,
+                category,
+                desc,
+                images: imageList.map((src, index) => ({
+                    src,
+                    href: linkList[index] || src,
+                    alt: index === 0 && coverImg ? coverImg.getAttribute('alt') || title : title
+                }))
+            };
+        }
+
+        function renderGalleryImage(index) {
+            activeIndex = (index + activeImages.length) % activeImages.length;
+            const image = activeImages[activeIndex];
+            mainImg.src = image.src;
+            mainImg.alt = image.alt || activeTitle;
+            mainLink.href = image.href || image.src;
+            counterEl.textContent = galleryLabels.counter(activeIndex + 1, activeImages.length);
+            prevBtn.hidden = activeImages.length < 2;
+            nextBtn.hidden = activeImages.length < 2;
+
+            thumbsEl.querySelectorAll('button').forEach((button, buttonIndex) => {
+                button.classList.toggle('active', buttonIndex === activeIndex);
+                button.setAttribute('aria-current', buttonIndex === activeIndex ? 'true' : 'false');
+            });
+        }
+
+        function openGallery(item) {
+            const gallery = readGalleryData(item);
+            if (!gallery.images.length) return;
+
+            activeImages = gallery.images;
+            activeTitle = gallery.title;
+            titleEl.textContent = gallery.title;
+            categoryEl.textContent = gallery.category;
+            descEl.textContent = gallery.desc;
+            thumbsEl.innerHTML = '';
+
+            gallery.images.forEach((image, index) => {
+                const thumb = document.createElement('button');
+                thumb.type = 'button';
+                thumb.className = 'gallery-thumb';
+                const thumbImg = document.createElement('img');
+                thumbImg.src = image.src;
+                thumbImg.alt = image.alt || gallery.title;
+                thumb.appendChild(thumbImg);
+                thumb.addEventListener('click', () => renderGalleryImage(index));
+                thumbsEl.appendChild(thumb);
+            });
+
+            modal.classList.add('active');
+            modal.setAttribute('aria-hidden', 'false');
+            document.body.classList.add('gallery-open');
+            renderGalleryImage(0);
+            modal.querySelector('.gallery-close').focus();
+        }
+
+        function closeGallery() {
+            modal.classList.remove('active');
+            modal.setAttribute('aria-hidden', 'true');
+            document.body.classList.remove('gallery-open');
+            mainImg.removeAttribute('src');
+            mainLink.setAttribute('href', '#');
+        }
+
+        galleryItems.forEach(item => {
+            item.setAttribute('tabindex', '0');
+            item.setAttribute('role', 'button');
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                if (item.dataset.projectUrl) {
+                    window.location.href = item.dataset.projectUrl;
+                    return;
+                }
+                openGallery(item);
+            });
+            item.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    if (item.dataset.projectUrl) {
+                        window.location.href = item.dataset.projectUrl;
+                        return;
+                    }
+                    openGallery(item);
+                }
+            });
+        });
+
+        modal.querySelectorAll('[data-gallery-close]').forEach(closeBtn => {
+            closeBtn.addEventListener('click', closeGallery);
+        });
+        prevBtn.addEventListener('click', () => renderGalleryImage(activeIndex - 1));
+        nextBtn.addEventListener('click', () => renderGalleryImage(activeIndex + 1));
+
+        document.addEventListener('keydown', (e) => {
+            if (!modal.classList.contains('active')) return;
+            if (e.key === 'Escape') closeGallery();
+            if (e.key === 'ArrowLeft') renderGalleryImage(activeIndex - 1);
+            if (e.key === 'ArrowRight') renderGalleryImage(activeIndex + 1);
+        });
+    }
     
     // === CONTACT FORM ===
     const contactForm = document.getElementById('contactForm');

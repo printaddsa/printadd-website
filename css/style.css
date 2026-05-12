@@ -1345,11 +1345,19 @@ input, textarea, select {
     overflow: hidden;
     box-shadow: var(--shadow-md);
     transition: var(--transition);
+    cursor: pointer;
+    background: var(--bg-white);
 }
 
-.portfolio-item:hover {
+.portfolio-item:hover,
+.portfolio-item:focus-visible {
     transform: translateY(-10px);
     box-shadow: var(--shadow-xl);
+}
+
+.portfolio-item:focus-visible {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 4px;
 }
 
 .portfolio-img {
@@ -1446,6 +1454,328 @@ input, textarea, select {
 
 .portfolio-cta {
     text-align: center;
+}
+
+body.gallery-open {
+    overflow: hidden;
+}
+
+.portfolio-gallery-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 3000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.portfolio-gallery-modal.active {
+    display: flex;
+}
+
+.gallery-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(16, 32, 43, 0.76);
+    backdrop-filter: blur(8px);
+}
+
+.gallery-dialog {
+    position: relative;
+    width: min(1100px, 100%);
+    max-height: calc(100vh - 48px);
+    background: var(--bg-white);
+    border-radius: 18px;
+    box-shadow: var(--shadow-xl);
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: auto minmax(260px, 1fr) auto;
+}
+
+.gallery-close {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    z-index: 2;
+    width: 44px;
+    height: 44px;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--text-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.gallery-close:hover,
+.gallery-close:focus-visible {
+    background: var(--primary-color);
+    color: var(--bg-white);
+    outline: none;
+}
+
+.gallery-header {
+    padding: 28px 34px 18px;
+    padding-inline-end: 86px;
+}
+
+.gallery-category {
+    display: inline-block;
+    margin-bottom: 8px;
+    color: var(--primary-color);
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.gallery-header h3 {
+    color: var(--text-dark);
+    font-size: 28px;
+    font-weight: 900;
+    margin-bottom: 8px;
+}
+
+.gallery-desc {
+    color: var(--text-light);
+    font-size: 15px;
+}
+
+.gallery-viewer {
+    position: relative;
+    min-height: 360px;
+    background: #f5f7f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-main-img {
+    width: 100%;
+    height: min(58vh, 620px);
+    object-fit: contain;
+    display: block;
+}
+
+.gallery-main-link {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: zoom-in;
+}
+
+.gallery-main-link:focus-visible {
+    outline: 3px solid var(--primary-color);
+    outline-offset: -6px;
+}
+
+.gallery-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 46px;
+    height: 46px;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.94);
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.gallery-nav:hover,
+.gallery-nav:focus-visible {
+    background: var(--primary-color);
+    color: var(--bg-white);
+    outline: none;
+}
+
+.gallery-prev {
+    left: 18px;
+}
+
+.gallery-next {
+    right: 18px;
+}
+
+.gallery-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    padding: 18px 24px 22px;
+}
+
+.gallery-thumbs {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding-bottom: 2px;
+}
+
+.gallery-thumb {
+    flex: 0 0 auto;
+    width: 78px;
+    height: 58px;
+    padding: 0;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    overflow: hidden;
+    background: transparent;
+    cursor: pointer;
+    opacity: 0.72;
+    transition: var(--transition);
+}
+
+.gallery-thumb.active,
+.gallery-thumb:hover,
+.gallery-thumb:focus-visible {
+    border-color: var(--primary-color);
+    opacity: 1;
+    outline: none;
+}
+
+.gallery-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-counter {
+    flex: 0 0 auto;
+    color: var(--text-light);
+    font-weight: 800;
+}
+
+/* === GALLERY PAGE === */
+.gallery-page-header {
+    background: var(--bg-white);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.gallery-page-nav {
+    min-height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.gallery-back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-dark);
+    font-weight: 800;
+    transition: var(--transition);
+}
+
+.gallery-back-link:hover {
+    color: var(--primary-color);
+}
+
+.gallery-page-logo img {
+    width: 92px;
+    height: 52px;
+    object-fit: contain;
+    display: block;
+}
+
+.gallery-page-hero {
+    padding: 80px 0 60px;
+    background: linear-gradient(180deg, #f7fbfc 0%, var(--bg-white) 100%);
+}
+
+.gallery-page-hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 440px;
+    gap: 48px;
+    align-items: center;
+}
+
+.gallery-page-copy h1 {
+    color: var(--text-dark);
+    font-size: 46px;
+    line-height: 1.25;
+    font-weight: 900;
+    margin: 14px 0 18px;
+}
+
+.gallery-page-copy p {
+    color: var(--text-light);
+    font-size: 18px;
+    line-height: 1.9;
+    margin-bottom: 28px;
+    max-width: 720px;
+}
+
+.gallery-page-cover {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: var(--shadow-xl);
+}
+
+.gallery-page-section {
+    padding: 60px 0 90px;
+}
+
+.gallery-page-title {
+    margin-bottom: 28px;
+}
+
+.gallery-page-title h2 {
+    color: var(--text-dark);
+    font-size: 32px;
+    font-weight: 900;
+    margin-bottom: 8px;
+}
+
+.gallery-page-title p {
+    color: var(--text-light);
+}
+
+.hardcover-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 18px;
+}
+
+.hardcover-gallery-item {
+    display: block;
+    background: #f5f7f8;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.hardcover-gallery-item:hover,
+.hardcover-gallery-item:focus-visible {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    outline: none;
+}
+
+.hardcover-gallery-item img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
 }
 
 /* === CTA SECTION === */
@@ -2020,6 +2350,56 @@ input, textarea, select {
     .portfolio-grid {
         grid-template-columns: 1fr;
     }
+
+    .portfolio-gallery-modal {
+        padding: 12px;
+    }
+
+    .gallery-dialog {
+        max-height: calc(100vh - 24px);
+        grid-template-rows: auto minmax(220px, 1fr) auto;
+        border-radius: 14px;
+    }
+
+    .gallery-header {
+        padding: 22px 22px 14px;
+        padding-inline-end: 70px;
+    }
+
+    .gallery-header h3 {
+        font-size: 22px;
+    }
+
+    .gallery-viewer {
+        min-height: 260px;
+    }
+
+    .gallery-main-img {
+        height: min(48vh, 440px);
+    }
+
+    .gallery-nav {
+        width: 40px;
+        height: 40px;
+    }
+
+    .gallery-prev {
+        left: 10px;
+    }
+
+    .gallery-next {
+        right: 10px;
+    }
+
+    .gallery-footer {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 14px 16px 18px;
+    }
+
+    .gallery-thumbs {
+        width: 100%;
+    }
     
     .cta-box {
         padding: 40px 30px;
@@ -2076,6 +2456,22 @@ input, textarea, select {
     
     .floating-card {
         display: none;
+    }
+
+    .portfolio-img img {
+        height: 240px;
+    }
+
+    .gallery-close {
+        top: 12px;
+        left: 12px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .gallery-thumb {
+        width: 66px;
+        height: 50px;
     }
 }
 
