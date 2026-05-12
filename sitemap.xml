@@ -47,6 +47,10 @@
             <image:title>تصميم وطباعة بروشورات</image:title>
         </image:image>
         <image:image>
+            <image:loc>https://printadd.sa/images/portfolio-hardcover-boxes.jpg</image:loc>
+            <image:title>علب هاردكفر فاخرة بكل أنواعها</image:title>
+        </image:image>
+        <image:image>
             <image:loc>https://printadd.sa/images/portfolio-business-cards.jpg</image:loc>
             <image:title>كروت عمل احترافية</image:title>
         </image:image>
@@ -97,6 +101,10 @@
         <image:image>
             <image:loc>https://printadd.sa/images/portfolio-brochure.jpg</image:loc>
             <image:title>Brochure design and printing</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://printadd.sa/images/portfolio-hardcover-boxes.jpg</image:loc>
+            <image:title>Luxury hardcover boxes in all styles</image:title>
         </image:image>
         <image:image>
             <image:loc>https://printadd.sa/images/portfolio-business-cards.jpg</image:loc>
