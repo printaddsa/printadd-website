@@ -151,4 +151,58 @@
             <image:title>علب تغليف جلد فاخر للمنتجات والهدايا</image:title>
         </image:image>
     </url>
+
+    <url>
+        <loc>https://printadd.sa/digital-printing.html</loc>
+        <lastmod>2026-05-12</lastmod>
+        <image:image>
+            <image:loc>https://printadd.sa/images/digital-printing/digital-printing-riyadh-001.jpg</image:loc>
+            <image:title>خدمات الطباعة الرقمية في الرياض</image:title>
+        </image:image>
+    </url>
+
+    <url>
+        <loc>https://printadd.sa/banners.html</loc>
+        <lastmod>2026-05-12</lastmod>
+        <image:image>
+            <image:loc>https://printadd.sa/images/banners/advertising-banners-riyadh-001.jpg</image:loc>
+            <image:title>بنرات إعلانية في الرياض</image:title>
+        </image:image>
+    </url>
+
+    <url>
+        <loc>https://printadd.sa/branding.html</loc>
+        <lastmod>2026-05-12</lastmod>
+        <image:image>
+            <image:loc>https://printadd.sa/images/branding/visual-identity-branding-riyadh-001.jpg</image:loc>
+            <image:title>هوية بصرية ومطبوعات شركات في الرياض</image:title>
+        </image:image>
+    </url>
+
+    <url>
+        <loc>https://printadd.sa/brochures.html</loc>
+        <lastmod>2026-05-12</lastmod>
+        <image:image>
+            <image:loc>https://printadd.sa/images/brochures/brochure-design-printing-riyadh-001.jpg</image:loc>
+            <image:title>تصميم وطباعة بروشورات في الرياض</image:title>
+        </image:image>
+    </url>
+
+    <url>
+        <loc>https://printadd.sa/business-cards.html</loc>
+        <lastmod>2026-05-12</lastmod>
+        <image:image>
+            <image:loc>https://printadd.sa/images/business-cards/business-cards-printing-riyadh-001.jpg</image:loc>
+            <image:title>كروت عمل احترافية في الرياض</image:title>
+        </image:image>
+    </url>
+
+    <url>
+        <loc>https://printadd.sa/promotional-gifts.html</loc>
+        <lastmod>2026-05-12</lastmod>
+        <image:image>
+            <image:loc>https://printadd.sa/images/promotional-gifts/promotional-gifts-riyadh-001.jpg</image:loc>
+            <image:title>هدايا دعائية وترويجية في الرياض</image:title>
+        </image:image>
+    </url>
 </urlset>
