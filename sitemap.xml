@@ -207,6 +207,83 @@
     </url>
 
     <url>
+        <loc>https://printadd.sa/digital-printing-en.html</loc>
+        <lastmod>2026-05-13</lastmod>
+        <xhtml:link rel="alternate" hreflang="ar-SA" href="https://printadd.sa/digital-printing.html" />
+        <xhtml:link rel="alternate" hreflang="en-SA" href="https://printadd.sa/digital-printing-en.html" />
+        <image:image>
+            <image:loc>https://printadd.sa/images/digital-printing/digital-printing-riyadh-001.jpg</image:loc>
+            <image:title>Digital printing services in Riyadh</image:title>
+        </image:image>
+    </url>
+
+    <url>
+        <loc>https://printadd.sa/banners-en.html</loc>
+        <lastmod>2026-05-13</lastmod>
+        <xhtml:link rel="alternate" hreflang="ar-SA" href="https://printadd.sa/banners.html" />
+        <xhtml:link rel="alternate" hreflang="en-SA" href="https://printadd.sa/banners-en.html" />
+        <image:image>
+            <image:loc>https://printadd.sa/images/banners/advertising-banners-riyadh-001.jpg</image:loc>
+            <image:title>Advertising banners in Riyadh</image:title>
+        </image:image>
+    </url>
+
+    <url>
+        <loc>https://printadd.sa/branding-en.html</loc>
+        <lastmod>2026-05-13</lastmod>
+        <xhtml:link rel="alternate" hreflang="ar-SA" href="https://printadd.sa/branding.html" />
+        <xhtml:link rel="alternate" hreflang="en-SA" href="https://printadd.sa/branding-en.html" />
+        <image:image>
+            <image:loc>https://printadd.sa/images/branding/visual-identity-branding-riyadh-001.jpg</image:loc>
+            <image:title>Branding and visual identity in Riyadh</image:title>
+        </image:image>
+    </url>
+
+    <url>
+        <loc>https://printadd.sa/brochures-en.html</loc>
+        <lastmod>2026-05-13</lastmod>
+        <xhtml:link rel="alternate" hreflang="ar-SA" href="https://printadd.sa/brochures.html" />
+        <xhtml:link rel="alternate" hreflang="en-SA" href="https://printadd.sa/brochures-en.html" />
+        <image:image>
+            <image:loc>https://printadd.sa/images/brochures/brochure-design-printing-riyadh-001.jpg</image:loc>
+            <image:title>Brochure design and printing in Riyadh</image:title>
+        </image:image>
+    </url>
+
+    <url>
+        <loc>https://printadd.sa/business-cards-en.html</loc>
+        <lastmod>2026-05-13</lastmod>
+        <xhtml:link rel="alternate" hreflang="ar-SA" href="https://printadd.sa/business-cards.html" />
+        <xhtml:link rel="alternate" hreflang="en-SA" href="https://printadd.sa/business-cards-en.html" />
+        <image:image>
+            <image:loc>https://printadd.sa/images/business-cards/business-cards-printing-riyadh-001.jpg</image:loc>
+            <image:title>Professional business cards in Riyadh</image:title>
+        </image:image>
+    </url>
+
+    <url>
+        <loc>https://printadd.sa/promotional-gifts-en.html</loc>
+        <lastmod>2026-05-13</lastmod>
+        <xhtml:link rel="alternate" hreflang="ar-SA" href="https://printadd.sa/promotional-gifts.html" />
+        <xhtml:link rel="alternate" hreflang="en-SA" href="https://printadd.sa/promotional-gifts-en.html" />
+        <image:image>
+            <image:loc>https://printadd.sa/images/promotional-gifts/promotional-gifts-riyadh-001.jpg</image:loc>
+            <image:title>Promotional gifts in Riyadh</image:title>
+        </image:image>
+    </url>
+
+    <url>
+        <loc>https://printadd.sa/hardcover-boxes-en.html</loc>
+        <lastmod>2026-05-13</lastmod>
+        <xhtml:link rel="alternate" hreflang="ar-SA" href="https://printadd.sa/hardcover-boxes.html" />
+        <xhtml:link rel="alternate" hreflang="en-SA" href="https://printadd.sa/hardcover-boxes-en.html" />
+        <image:image>
+            <image:loc>https://printadd.sa/images/portfolio-hardcover-boxes.jpg</image:loc>
+            <image:title>Luxury hardcover boxes in Riyadh</image:title>
+        </image:image>
+    </url>
+
+    <url>
         <loc>https://printadd.sa/privacy-policy.html</loc>
         <lastmod>2026-05-12</lastmod>
         <xhtml:link rel="alternate" hreflang="ar-SA" href="https://printadd.sa/privacy-policy.html" />

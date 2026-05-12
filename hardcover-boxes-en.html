@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Luxury hardcover boxes gallery in Riyadh by Print Address.">
+    <meta name="keywords" content="hardcover boxes riyadh, luxury packaging boxes, custom rigid boxes">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://printadd.sa/hardcover-boxes-en.html">
+    <meta property="og:title" content="Luxury Hardcover Boxes | Print Address">
+    <meta property="og:description" content="Explore luxury hardcover boxes in multiple styles and sizes.">
+    <meta property="og:image" content="https://printadd.sa/images/portfolio-hardcover-boxes.jpg">
+    <link rel="canonical" href="https://printadd.sa/hardcover-boxes-en.html">
+    <link rel="alternate" hreflang="ar-SA" href="https://printadd.sa/hardcover-boxes.html">
+    <link rel="alternate" hreflang="en-SA" href="https://printadd.sa/hardcover-boxes-en.html">
+    <title>Luxury Hardcover Boxes in Riyadh | Print Address</title>
+    <link rel="icon" href="/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-en.css">
+</head>
+<body>
+    <header class="gallery-page-header"><div class="container gallery-page-nav"><a href="en.html#portfolio" class="gallery-back-link"><span>Back to Portfolio</span></a><a href="en.html" class="gallery-page-logo"><img src="images/logo.png" alt="Print Address Logo"></a></div></header>
+    <main><section class="gallery-page-hero"><div class="container gallery-page-hero-grid"><div class="gallery-page-copy"><span class="section-badge">Luxury Packaging</span><h1>Luxury Hardcover Boxes</h1><p>A wide range of rigid and hardcover box designs for gifts, products, and premium brand presentation.</p><a href="en.html#contact" class="btn btn-primary"><span>Request Similar Work</span><i class="fas fa-arrow-right"></i></a></div><img src="images/portfolio-hardcover-boxes.jpg" alt="Luxury hardcover boxes in Riyadh" class="gallery-page-cover"></div></section><section class="gallery-page-section"><div class="container"><div class="gallery-page-title"><h2>Gallery</h2><p>Click any image to open full size.</p></div><div class="hardcover-gallery-grid" id="hardcoverGallery"></div></div></section></main>
+    <script>
+        const gallery = document.getElementById('hardcoverGallery');
+        const totalImages = 336;
+        const imagePath = (index) => `images/hardcover-boxes-optimized/hardcover-boxes-riyadh-${String(index).padStart(3, '0')}.jpg`;
+        const leatherBoxGroups = [
+            { prefix: 'علب-جلد-فاخر-للهدايا', count: 10, alt: 'Luxury leather gift boxes' },
+            { prefix: 'علب-هارد-كفر-جلد', count: 10, alt: 'Hardcover leather boxes' },
+            { prefix: 'علب-فاخرة-جلدية-للمنتجات', count: 10, alt: 'Luxury leather product boxes' },
+            { prefix: 'علب-تغليف-جلد-فاخر', count: 10, alt: 'Luxury leather packaging boxes' },
+            { prefix: 'علب-هدايا-جلد-فاخرة', count: 10, alt: 'Premium leather gift boxes' },
+            { prefix: 'علب-جلد-مخصصة-بالشعار', count: 10, alt: 'Custom logo leather boxes' },
+            { prefix: 'علب-فاخرة-للعطور-والهدايا', count: 10, alt: 'Luxury perfume and gift boxes' },
+            { prefix: 'علب-جلد-اسود-فاخر', count: 10, alt: 'Luxury black leather boxes' },
+            { prefix: 'علب-جلد-بتصميم-ملكي', count: 8, alt: 'Royal style leather boxes' },
+            { prefix: 'علب-هاردكفر-فاخرة-جلد', count: 8, alt: 'Luxury hardcover leather boxes' },
+            { prefix: 'علب-جلد-للشركات', count: 8, alt: 'Corporate leather boxes' },
+            { prefix: 'علب-فاخرة-طباعة-وتغليف', count: 7, alt: 'Luxury printed and packaged boxes' }
+        ];
+        function appendGalleryImage(src, alt, loading = 'lazy') {
+            const link = document.createElement('a');
+            link.href = src;
+            link.className = 'hardcover-gallery-item';
+            link.target = '_blank';
+            link.rel = 'noopener';
+            const img = document.createElement('img');
+            img.src = src;
+            img.alt = alt;
+            img.loading = loading;
+            link.appendChild(img);
+            gallery.appendChild(link);
+        }
+        for (let index = 1; index <= totalImages; index += 1) {
+            appendGalleryImage(imagePath(index), `Luxury hardcover boxes in Riyadh - Sample ${index}`, index <= 8 ? 'eager' : 'lazy');
+        }
+        leatherBoxGroups.forEach((group) => {
+            for (let index = 1; index <= group.count; index += 1) {
+                const paddedIndex = String(index).padStart(3, '0');
+                appendGalleryImage(`images/hardcover-boxes-optimized/${group.prefix}-${paddedIndex}.jpg`, `${group.alt} - Sample ${index}`);
+            }
+        });
+    </script>
+</body>
+</html>
