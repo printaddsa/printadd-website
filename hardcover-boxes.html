@@ -71,7 +71,7 @@
     <script>
         const gallery = document.getElementById('hardcoverGallery');
         const totalImages = 336;
-        const imagePath = (index) => `images/hardcover-boxes/hardcover-boxes-riyadh-${String(index).padStart(3, '0')}.png`;
+        const imagePath = (index) => `images/hardcover-boxes-optimized/hardcover-boxes-riyadh-${String(index).padStart(3, '0')}.jpg`;
         const leatherBoxGroups = [
             { prefix: 'علب-جلد-فاخر-للهدايا', count: 10, alt: 'علب جلد فاخر للهدايا' },
             { prefix: 'علب-هارد-كفر-جلد', count: 10, alt: 'علب هارد كفر جلد' },
@@ -115,7 +115,7 @@
             for (let index = 1; index <= group.count; index += 1) {
                 const paddedIndex = String(index).padStart(3, '0');
                 appendGalleryImage(
-                    `images/hardcover-boxes/${group.prefix}-${paddedIndex}.png`,
+                    `images/hardcover-boxes-optimized/${group.prefix}-${paddedIndex}.jpg`,
                     `${group.alt} في الرياض - نموذج ${index}`
                 );
             }
