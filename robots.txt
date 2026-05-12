@@ -1,0 +1,13 @@
+# robots.txt for Print Address
+# Public site: https://printadd.sa/
+
+User-agent: *
+Allow: /
+Allow: /css/
+Allow: /js/
+Allow: /images/
+
+# Internal project files should not be crawled.
+Disallow: /.sixth/
+
+Sitemap: https://printadd.sa/sitemap.xml

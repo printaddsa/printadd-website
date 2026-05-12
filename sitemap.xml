@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+    <url>
+        <loc>https://printadd.sa/</loc>
+        <lastmod>2026-05-12</lastmod>
+        <xhtml:link rel="alternate" hreflang="ar-SA" href="https://printadd.sa/" />
+        <xhtml:link rel="alternate" hreflang="en-SA" href="https://printadd.sa/en.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://printadd.sa/" />
+        <image:image>
+            <image:loc>https://printadd.sa/images/logo.png</image:loc>
+            <image:title>شعار عنوان الطباعة</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://printadd.sa/images/og-image.jpg</image:loc>
+            <image:title>عنوان الطباعة - حلول الطباعة والدعاية والإعلان</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://printadd.sa/images/hero-printing-services.jpg</image:loc>
+            <image:title>حلول عنوان الطباعة للطباعة والدعاية والإعلان</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://printadd.sa/images/about-print-address.jpg</image:loc>
+            <image:title>فريق عنوان الطباعة وأعمال الطباعة الاحترافية</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://printadd.sa/images/why-choose-print-address.jpg</image:loc>
+            <image:title>جودة منتجات عنوان الطباعة</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://printadd.sa/images/digital-printing-riyadh.jpg</image:loc>
+            <image:title>الطباعة الرقمية في الرياض</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://printadd.sa/images/portfolio-banners.jpg</image:loc>
+            <image:title>بنرات إعلانية مطبوعة</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://printadd.sa/images/portfolio-branding.jpg</image:loc>
+            <image:title>هوية بصرية ومواد دعائية</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://printadd.sa/images/portfolio-brochure.jpg</image:loc>
+            <image:title>تصميم وطباعة بروشورات</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://printadd.sa/images/portfolio-business-cards.jpg</image:loc>
+            <image:title>كروت عمل احترافية</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://printadd.sa/images/portfolio-promotional-gifts.jpg</image:loc>
+            <image:title>هدايا دعائية للشركات</image:title>
+        </image:image>
+    </url>
+
+    <url>
+        <loc>https://printadd.sa/en.html</loc>
+        <lastmod>2026-05-12</lastmod>
+        <xhtml:link rel="alternate" hreflang="ar-SA" href="https://printadd.sa/" />
+        <xhtml:link rel="alternate" hreflang="en-SA" href="https://printadd.sa/en.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://printadd.sa/" />
+        <image:image>
+            <image:loc>https://printadd.sa/images/logo.png</image:loc>
+            <image:title>Print Address Logo</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://printadd.sa/images/og-image.jpg</image:loc>
+            <image:title>Print Address - Printing and Advertising Solutions</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://printadd.sa/images/hero-printing-services.jpg</image:loc>
+            <image:title>Print Address printing and advertising solutions</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://printadd.sa/images/about-print-address.jpg</image:loc>
+            <image:title>Print Address team and professional printed materials</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://printadd.sa/images/why-choose-print-address.jpg</image:loc>
+            <image:title>High-quality printed products by Print Address</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://printadd.sa/images/digital-printing-riyadh.jpg</image:loc>
+            <image:title>Digital printing services in Riyadh</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://printadd.sa/images/portfolio-banners.jpg</image:loc>
+            <image:title>Printed advertising banners</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://printadd.sa/images/portfolio-branding.jpg</image:loc>
+            <image:title>Branding and visual identity materials</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://printadd.sa/images/portfolio-brochure.jpg</image:loc>
+            <image:title>Brochure design and printing</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://printadd.sa/images/portfolio-business-cards.jpg</image:loc>
+            <image:title>Professional business cards</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://printadd.sa/images/portfolio-promotional-gifts.jpg</image:loc>
+            <image:title>Promotional gifts for companies</image:title>
+        </image:image>
+    </url>
+</urlset>

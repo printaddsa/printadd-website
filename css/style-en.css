@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --font-primary: 'Inter', 'Tajawal', sans-serif;
+}
+
+body {
+    direction: ltr;
+    text-align: left;
+}
+
+.nav-link::after {
+    left: 0;
+    right: auto;
+}
+
+.dropdown {
+    left: 0;
+    right: auto;
+}
+
+.dropdown li a:hover {
+    padding-left: 25px;
+    padding-right: 20px;
+}
+
+.hero-desc {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.card-1 {
+    left: -20px;
+    right: auto;
+}
+
+.card-2 {
+    left: auto;
+    right: -30px;
+}
+
+.card-3 {
+    left: 0;
+    right: auto;
+}
+
+.feature-box:hover {
+    transform: translateX(10px);
+}
+
+.info-card:hover {
+    transform: translateX(5px);
+}
+
+.vm-decoration,
+.service-bg {
+    left: 10px;
+    right: auto;
+}
+
+.experience-badge {
+    left: auto;
+    right: -30px;
+}
+
+.shape-1 {
+    left: -100px;
+    right: auto;
+}
+
+.shape-2 {
+    left: auto;
+    right: -50px;
+}
+
+.why-item {
+    text-align: left;
+}
+
+.stats-float {
+    left: -30px;
+    right: auto;
+}
+
+.why-shape {
+    left: auto;
+    right: -50px;
+}
+
+.portfolio-link {
+    left: auto;
+    right: 20px;
+}
+
+.form-group label {
+    left: 20px;
+    right: auto;
+}
+
+.btn-loader {
+    left: auto;
+    right: 20px;
+}
+
+.footer-links a:hover {
+    padding-left: 10px;
+    padding-right: 0;
+}
+
+.scroll-top {
+    left: auto;
+    right: 30px;
+}
+
+.whatsapp-float {
+    left: 30px;
+    right: auto;
+}
+
+@media (max-width: 768px) {
+    .dropdown li a:hover {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .experience-badge,
+    .stats-float {
+        left: 20px;
+        right: auto;
+    }
+}
