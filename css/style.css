@@ -1778,6 +1778,51 @@ body.gallery-open {
     display: block;
 }
 
+/* === LEGAL PAGES === */
+.legal-page {
+    background: linear-gradient(180deg, #f7fbfc 0%, var(--bg-white) 220px);
+    padding: 70px 0 90px;
+}
+
+.legal-container {
+    max-width: 900px;
+    background: var(--bg-white);
+    border: 1px solid var(--border-color);
+    border-radius: 18px;
+    padding: 46px;
+    box-shadow: var(--shadow-md);
+}
+
+.legal-container h1 {
+    color: var(--text-dark);
+    font-size: 42px;
+    line-height: 1.25;
+    font-weight: 900;
+    margin: 14px 0 8px;
+}
+
+.legal-updated {
+    color: var(--text-gray);
+    margin-bottom: 34px;
+}
+
+.legal-container section {
+    padding: 24px 0;
+    border-top: 1px solid var(--border-color);
+}
+
+.legal-container h2 {
+    color: var(--text-dark);
+    font-size: 22px;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.legal-container p {
+    color: var(--text-light);
+    line-height: 1.9;
+}
+
 /* === CTA SECTION === */
 .cta {
     padding: 100px 0;

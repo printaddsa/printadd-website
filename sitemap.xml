@@ -205,4 +205,32 @@
             <image:title>هدايا دعائية وترويجية في الرياض</image:title>
         </image:image>
     </url>
+
+    <url>
+        <loc>https://printadd.sa/privacy-policy.html</loc>
+        <lastmod>2026-05-12</lastmod>
+        <xhtml:link rel="alternate" hreflang="ar-SA" href="https://printadd.sa/privacy-policy.html" />
+        <xhtml:link rel="alternate" hreflang="en-SA" href="https://printadd.sa/privacy-policy-en.html" />
+    </url>
+
+    <url>
+        <loc>https://printadd.sa/privacy-policy-en.html</loc>
+        <lastmod>2026-05-12</lastmod>
+        <xhtml:link rel="alternate" hreflang="ar-SA" href="https://printadd.sa/privacy-policy.html" />
+        <xhtml:link rel="alternate" hreflang="en-SA" href="https://printadd.sa/privacy-policy-en.html" />
+    </url>
+
+    <url>
+        <loc>https://printadd.sa/terms-and-conditions.html</loc>
+        <lastmod>2026-05-12</lastmod>
+        <xhtml:link rel="alternate" hreflang="ar-SA" href="https://printadd.sa/terms-and-conditions.html" />
+        <xhtml:link rel="alternate" hreflang="en-SA" href="https://printadd.sa/terms-and-conditions-en.html" />
+    </url>
+
+    <url>
+        <loc>https://printadd.sa/terms-and-conditions-en.html</loc>
+        <lastmod>2026-05-12</lastmod>
+        <xhtml:link rel="alternate" hreflang="ar-SA" href="https://printadd.sa/terms-and-conditions.html" />
+        <xhtml:link rel="alternate" hreflang="en-SA" href="https://printadd.sa/terms-and-conditions-en.html" />
+    </url>
 </urlset>
